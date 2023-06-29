@@ -1,6 +1,7 @@
 package com.jpa.mapping.controller;
 
 import com.jpa.mapping.dto.ApiResponse;
+import com.jpa.mapping.dto.StudentRequestDto;
 import com.jpa.mapping.model.StudentModel;
 import com.jpa.mapping.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class StudentController {
 
 
     @PostMapping("/add")
-    public StudentModel addStudent(@RequestBody StudentModel studentModel) throws Exception{
-      return studentService.addStudent(studentModel);
+    public StudentModel addStudent(@RequestBody StudentRequestDto studentRequestDto) throws Exception{
+      return studentService.addStudent(studentRequestDto);
 
     }
 }
